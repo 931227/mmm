@@ -1,0 +1,54 @@
+// 品牌排行内容渲染
+$.ajax({
+  url: 'http://139.199.157.195:9090/api/getbrandtitle',
+  type: 'GET',
+  dataType: 'json',
+  success : function( data ){
+    var html = template('rankTmp',data);
+    $('#rank').html( html );
+    $('#rank .list-group .list-group-item').on('click',getResourse)
+  }
+})
+
+
+function getResourse(){
+  // 二级页面第一部分渲染
+    var $index = this.children[0].dataset.id;
+    $.ajax({
+      url: 'http://139.199.157.195:9090/api/getbrand',
+      type: 'GET',
+      dataType: 'json',
+      data: {brandtitleid: $index},
+      success : function( data ){
+           html = template('oneTmp',data);
+               
+      }
+    })
+    // 二级页面第二部分渲染
+    $.ajax({
+      url: 'http://139.199.157.195:9090/api/getbrandproductlist',
+      type: 'GET',
+      dataType: 'json',
+      data: {brandtitleid: $index},
+      success : function( data ){
+          html += template('twoTmp',data);
+      }
+    })
+    // 二级页面第三部分渲染
+    $.ajax({
+      url: 'http://139.199.157.195:9090/api/getproductcom',
+      type: 'GET',
+      dataType: 'json',
+      data: {productid : 1},
+      success : function( data ){
+          html += template('threeTmp',data);
+          $('#rank').html( html );
+          // 增加面包屑导航条目
+          $('#nav .breadcrumb').append('<li><a href="#">'+$('#rank .one h3').html() +'</a></li>')
+      }
+    })
+    
+
+}
+
+

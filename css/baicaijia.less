@@ -1,0 +1,247 @@
+body {
+  background-color: whitesmoke;
+}
+/*头部区域*/
+#header{
+  height:44px;
+  position: relative;
+  .icon-zuo{
+    position: absolute;
+    left:10px;
+    top:8px;
+    &:before{
+      color:#fff;
+      font-size: 20px;
+      font-weight: 900;
+    } 
+  }
+  .tittle{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 44px;
+    color: #fff;
+  }
+  .icon-appxiazai{
+       position: absolute;
+       right:15px;
+       top:0px;
+       &:before{
+          color:#fff;
+          font-size: 30px;
+          // font-weight: 900;
+       } 
+    }
+}
+
+
+/*导航区域*/
+#baicainav {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+  background-color: #fff;
+  position: relative;
+  > .nav-left {
+    overflow: hidden;
+    height:38px;   
+    position: relative;
+    > ul {
+      height:38px;
+      width: 10000px;
+      position: absolute;
+      left: 0;
+      top:0;
+      > li {
+        float: left;
+        > a{
+          display: block;
+          height:38px;
+          line-height: 38px;
+          margin: 0 10px;
+          &.current {
+            color: #e4393c;
+            border-bottom: 2px solid #e4393c;
+          }
+        }
+      }
+    }
+  }
+  > .nav-right {
+    float: right;
+    width: 38px;
+    height: 38px;
+    border-left: 1px solid #ccc;
+    > i {
+      display: block;
+      width: 100%;
+      height: 100%;
+      font-size: 24px;
+      &:before {
+        padding-left: 8px;
+      }
+    }
+  }
+  .search{
+    display: none;
+    width: 100%;
+    padding: 5px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    position: absolute;
+    bottom: -42px;
+    left: 0;
+    form{
+      width: 100%;
+      height: 30px;
+      position: relative;
+      padding-right: 80px;
+      input[type="search"]{
+        width: 100%;
+        height: 100%;
+        background-color: #f1f1f1;
+        border-radius: 15px;
+        padding-left: 15px;
+        font-size: 16px;
+        line-height: 30px;
+      }
+      input[type="button"]{
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 63px;
+          height: 100%;
+          border-radius: 15px;
+          background-color: #ff841d;
+          font-size: 18px;
+          color:#fff;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*白菜价分类列表*/
+#baicaicategory{
+  .baicai-item {
+    padding:10px;
+    margin-bottom: 5px;
+    background-color: #fff;
+    > .item-left {
+      width: 130px;
+      height: 130px;
+      float: left;
+      > img {
+        width: 100%;
+        height: 100%;  
+      }
+    }
+    > .item-right {
+        padding-left: 140px;
+        > h2 {
+          min-height: 28px;
+          max-height: 40px;
+          line-height: 1.5;
+          font-weight: 400;
+          text-align-last: left;
+          -webkit-line-clamp: 2;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          color:#000;
+          font-size: 14px;
+        }
+        > .price {
+            font-size: 18px;
+            color:red;
+            padding:10px 0;
+          > em {
+            color:red;
+            font-size: 12px;
+          }
+          > del {
+            font-size: 12px;
+            color:#ccc;
+            margin-left: 20px;
+          }
+        }
+        > .bar {
+          height: 25px;
+          overflow: hidden;
+          > i {
+            display: inline-block;
+            width: 82px;
+            height: 14px;
+            line-height: 14px;
+            border: 1px solid #fc353a;
+            border-radius: 6px;
+            color: #fff;
+            font-weight: 900;
+            background: #ffb7b7;
+            text-align: center;
+            position: relative;
+            > em {
+              display: block;
+              background-color: #fc353a;
+              height: 13px;
+              border-radius: 6px;
+              position: absolute;
+              left:0;
+              top:0;
+            }
+            > span {
+              position: absolute;
+              left:50%;
+              top:0;
+              transform:translateX(-50%);
+            }
+          }
+          > b {
+            font-weight: normal;
+            font-size: 12px;
+            vertical-align: 3px;
+            margin-left: 10px;
+            color: #fc353a;
+          }
+        }
+        > .coupon {
+          width: 100%;
+          > a:nth-child(1) {
+            border: 1px dotted #e4393c;
+            height: 26px;
+            line-height: 26px;
+            text-align: center;
+            display: block;
+            padding: 0px 5px;
+            font-size: 12px;
+            color: #e4393c;
+            position: relative;
+            z-index: 1;
+            float: left;
+          }
+          > a:nth-child(2) {
+            height: 28px;
+            line-height: 28px;
+            text-align: center;
+            display: block;
+            background-color: #ff5e5d;
+            color: #ffffff;
+            border-radius: 4px;
+            padding: 0px 5px;
+            font-size: 12px;
+            position: relative;
+            z-index: 1;
+            float: right;
+          }
+        }
+    }
+  }
+}

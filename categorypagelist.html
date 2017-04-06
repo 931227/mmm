@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>动态生成</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="fav icon" href="images/favicon.ico">
+        <!-- 先引入第三方再引入自己 -->
+        <link rel="stylesheet" href='lib/bootstrap/css/bootstrap.css'>
+        <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+        <link rel="stylesheet/less" href="css/base.less">
+        <link rel="stylesheet/less" href="css/categorypagelist.less">
+        <!-- 引入less编辑 -->
+        <script src="lib/less/less.min.js"></script>
+    </head>
+    <body>
+
+     <!-- 头部区域 -->
+    <header id='header'>
+        <a href="index.html" class="logo"><img src="images/header_logo.png" ></a>
+        <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia&ckey=CK1360146084813" class="app"><img src="images/header_app.png" ></a>
+    </header>
+    <!-- 搜索区域 -->
+    <section id='search'>
+        <form action="">
+            <input type="search" placeholder='请输入你想比价的商品'>
+            <input type="button" value="搜索">
+        </form>
+    </section>
+
+    <!-- 面包屑导航 -->
+    <section id='nav'>
+      <ol class="breadcrumb">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="category.html">全部分类</a></li>
+      </ol>
+    </section>
+
+    <!-- 分类商品展示 -->
+    <section id="catepage">
+     <!--  <div class="media" data-id={{value.productId}}>
+        <a class="pull-left" href="#">
+          <img src="images/jy.jpg" alt="">
+        </a>
+        <div class="media-body">
+          <h4 class="media-heading">创维(Skyworth) 50M5 50英寸 超高清 智能网络LED液晶电视</h4>
+          <h3>￥2499.00元</h3>
+          <p class="other">
+            <span>报价(7)</span>&nbsp;     <a href="">评论(2961)</a>
+          </p>
+        </div>
+      </div>  -->
+    </section>
+
+    <!-- 底部翻页导航 -->
+    <section id="paging">
+      <input type="button" value="上一页" class="up forbit">
+      <input type="button" value="下一页" class="down">
+      <div class="page iconfont icon-xia">
+         
+      </div>
+      <ul class="selector">
+
+      </ul>
+    </section>
+
+    <!-- 分类商品详情 -->
+    <section id="productdetail">
+      <!-- <div class="overview">
+        <img src="images/tv.jpg" >
+        <h2>酷开(coocaa) K32 32英寸 高清720P智能网络LED液晶电视</h2>
+        <i>收藏</i>
+      </div>
+      <div class="parameter">
+        <ul class="clearfix">
+            <li class="on"><a href="#">比价购买</a></li>
+            <li ><a href="#">产品参数</a></li>
+            <li ><a href="#">评价(2322)</a></li>
+        </ul>
+      </div> -->
+      <div class="showdetail">
+         <!--  <table width= "100%">
+              <tbody>
+                  <tr style="height:40px;">
+                      <td rowspan= "2" class= "p_pic" style="padding-left:10px;">
+                          <a href= "redirect.aspx?webid=1&amp;bjid=76069915&amp;tourl=http://item.jd.com/1162187.html&amp;y=bijia" target= "_blank" > <img src= "http://sf.manmanbuy.com/images/sitelogo/1.png"></a>
+                      </td>
+                      <td> <a href= "redirect.aspx?webid=1&amp;bjid=76069915&amp;tourl=http://item.jd.com/1162187.html&amp;y=bijia" target= "_blank" >京东商城</a> </td>
+                      <td style= "color:red;"> ￥1999.00 </td>
+                      <td align= "center" width= "60"> <span style= "display: inline-block;width: 56px;height: 24px;border-radius: 6px;text-align: center;line-height: 24px;background-color: #ff5500;color: #fff;font-size: 14px;">去购买</span> </td>
+                  </tr>
+                  <tr class= "tab2">
+                      <td> </td>
+                      <td class= "r"> </td>
+                      <td></td>
+                  </tr>
+              </tbody>
+          </table> -->
+      </div>
+      <div class="brief">
+          <div class="briefin">
+              <div class="briefinc">
+                  <table border="0" cellpadding="0" cellspacing="1" class="Ptable" width="100%">
+                      <tbody>
+                          <tr>
+                              <th class="tdTitle" colspan="2"> 基本参数 </th>
+                          </tr>
+                          <tr> </tr>
+                          <tr>
+                              <td class="tdTitle"> 音箱类型 </td>
+                              <td> 电脑音箱，低音炮音箱 </td>
+                          </tr>
+                          <tr>
+                              <td class="tdTitle"> 音箱系统 </td>
+                              <td> 2.1声道 </td>
+                          </tr>
+                          <tr>
+                              <td class="tdTitle"> 有源无源 </td>
+                              <td> 有源 </td>
+                          </tr>
+                          <tr>
+                              <td class="tdTitle"> 调节方式 </td>
+                              <td> 旋钮 </td>
+                          </tr>
+                          <tr>
+                              <th class="tdTitle" colspan="2"> 技术参数 </th>
+                          </tr>
+                          <tr> </tr>
+                          <tr>
+                              <td class="tdTitle"> 供电方式 </td>
+                              <td> 电源220V/50Hz </td>
+                          </tr>
+                          <tr>
+                              <td class="tdTitle"> 额定功率 </td>
+                              <td> 8.5W </td>
+                          </tr>
+                          <tr>
+                              <td class="tdTitle"> 扬声器单元 </td>
+                              <td> 4英寸 </td>
+                          </tr>
+                          <tr>
+                              <td class="tdTitle"> 信噪比 </td>
+                              <td> 85dB </td>
+                          </tr>
+                          <tr>
+                              <td class="tdTitle"> 失真度 </td>
+                              <td> ≤0.5% 1W 1KHz </td>
+                          </tr>
+                          <tr>
+                              <td class="tdTitle"> 防磁功能 </td>
+                              <td> 支持 </td>
+                          </tr>
+                          <tr>
+                              <th class="tdTitle" colspan="2"> 外观参数 </th>
+                          </tr>
+                          <tr> </tr>
+                          <tr>
+                              <td class="tdTitle"> 音箱尺寸 </td>
+                              <td> 低音炮162×226×206mm 卫星箱68×166×86mm </td>
+                          </tr>
+                          <tr>
+                              <td class="tdTitle"> 音箱重量 </td>
+                              <td> 2.3kg </td>
+                          </tr>
+                          <tr>
+                              <th class="tdTitle" colspan="2"> 音箱附件 </th>
+                          </tr>
+                          <tr> </tr>
+                          <tr>
+                              <td class="tdTitle"> 包装清单 </td>
+                              <td> 音箱本机 x1说明书 x1保修卡 x1音频线 x1电源线 x1 </td>
+                          </tr>
+                          <tr>
+                              <th class="tdTitle" colspan="2"> 保修信息 </th>
+                          </tr>
+                          <tr> </tr>
+                          <tr>
+                              <td class="tdTitle"> 保修政策 </td>
+                              <td> 全国联保，享受三包服务 </td>
+                          </tr>
+                          <tr>
+                              <td class="tdTitle"> 质保时间 </td>
+                              <td> 3年 </td>
+                          </tr>
+                          <tr>
+                              <td class="tdTitle"> 质保备注 </td>
+                              <td> 整机3个月内包换，1年内免费保修，3年内有限维修；喇叭、分频器、IC部件损坏免费保修2年 </td>
+                          </tr>
+                          <tr>
+                              <td class="tdTitle"> 客服电话 </td>
+                              <td> 800-810-5526 </td>
+                          </tr>
+                          <tr>
+                              <td class="tdTitle"> 电话备注 </td>
+                              <td> 周一至周六9:00-17:00（节假日休息） </td>
+                          </tr>
+                          <tr>
+                              <td class="tdTitle"> 详细内容 </td>
+                              <td> 售后服务由品牌厂商提供，支持全国联保，可享有三包服务！如出现产品质量问题或故障，您可查询最近的维修点，由厂商的售后解决；也可凭厂商维修中心或特约维修点所提供的质量检测证明，享受7日内退货，15日内换货。超过15日又在质保期内，可享受免费保修等三包服务！进入官网&gt;&gt; </td>
+                          </tr>
+                      </tbody>
+                  </table>
+                  <div class="mc hide" data-widget="tab-content" id="product-detail-6"> &nbsp;</div>
+              </div>
+          </div>
+      </div>
+      <div class="comment">
+        <!-- <div class="com-item">
+          <div class="info">
+            <p class="clearfix"><span>j***浩</span><span>2017/4/2</span></p>
+            <p class="clearfix"><span>购买自：京东商城</span></p>
+          </div>
+          <div class="body">
+            机头是我最满意的地方，是不锈钢的，卖场里500 600的机子，机头竟然是塑料的。就只一点而言，这款机子非常值得入手。  蒸汽方面，量不是很大，毕竟价格在那，但是一般的家用还是足够了。熨烫棉质的衣物效果最明显。刚开始使用的时候，会有很大的胶味，是气管的原因，所使用几次就没有了。总体来说，这个价位很值得入手，支持一个              
+          </div>
+        </div> -->
+      </div>
+    </section>
+    
+
+    <!-- 底部区域 -->
+    <footer id='footer'>
+        <ul class="clearfix">
+            <li class="login"><a href="login.html">登录</a></li>
+            <li class="register"><a href="register.html">注册</a></li>
+            <li class="top"><a href="#"><i class="iconfont icon-xiangshang"></i>返回顶部</a></li>
+        </ul>
+        <div class="info">
+            <p><a href="#"><span>手机APP下载</span> 慢慢买手机版--掌上比价平台</a></p>
+            <p><a href="#">m.manmanbuy.com</a></p>
+        </div>
+    </footer>
+    <!-- app下载 -->
+    <div id="download">
+      <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia&ckey=CK1360146084813"><img src="images/download.png"></a>
+    </div>
+  
+    <!-- 优惠商品模板 -->
+    <script type="text/html" id='catepageTmp'>
+      {{each result as value}}
+      <div class="media" data-id={{value.productId}}>
+        <a class="pull-left" href="#">
+          {{#value.productImg}}
+        </a>
+        <div class="media-body">
+          <h4 class="media-heading">{{value.productName}}</h4>
+          <h3>{{value.productPrice}}</h3>
+          <p class="other">
+            <span>{{value.productQuote}}</span>&nbsp;     <a href="">{{value.productCom}}</a>
+          </p>
+        </div>
+      </div> 
+      {{/each}} 
+    </script>
+    <!-- 面包屑模板 -->
+    <script type="text/html" id='breadTmp'>
+      {{each result as value}}
+      <li><a href="categorypagelist.html?productid={{value.categoryId}}">{{value.category}}</a></li>
+      {{/each}}
+    </script>
+    
+    <!-- 概览模板 -->
+    <script type="text/html" id='overviewTmp'>
+      {{each result as value}}
+          <div class="overview">
+            {{#value.productImg}}
+            <h2>{{value.productName}}</h2>
+            <a href="login.html"><i>收藏</i></a>
+          </div>
+          <div class="parameter">
+            <ul class="clearfix">
+                <li ><a href="#" class="on">比价购买</a></li>
+                <li ><a href="#">产品参数</a></li>
+                <li ><a href="#">评价(2322)</a></li>
+            </ul>
+          </div>
+      {{/each}}
+    </script>
+
+    <!-- 评论模板 -->
+    <script type="text/html" id='commentTmp'>
+      {{each result as value}}
+            <div class="com-item">
+              <div class="info">
+                <p class="clearfix"><span>{{value.comName}}</span><span>{{value.comTime}}</span></p>
+                <p class="clearfix"><span>{{value.comFrom}}</span></p>
+              </div>
+              <div class="body">
+                {{value.comContent}}   
+              </div>
+            </div>
+          </div>
+      {{/each}}
+    </script>
+
+
+
+
+
+
+
+
+
+    <!-- 商城模板 -->
+    <script type="text/html" id='mallTmp'>
+      {{each result as value i}}
+      {{if i < 10 }}
+        <table width= "100%">
+            <tbody>
+                <tr style="height:40px;">
+                    <td style="padding-left:10px;">
+                        <a href= {{value.navHref}} target= "_blank" > <img src= {{value.navImg}}></a>
+                    </td>
+                    <td> <a href= "redirect.aspx?webid=1&amp;bjid=76069915&amp;tourl=http://item.jd.com/1162187.html&amp;y=bijia" target= "_blank" >{{value.navTitle}}</a> </td>
+                    <td style= "color:red;"> ￥1999.00 </td>
+                    <td align= "center" width= "60"> <span style= "display: inline-block;width: 56px;height: 24px;border-radius: 6px;text-align: center;line-height: 24px;background-color: #ff5500;color: #fff;font-size: 14px;">去购买</span> </td>
+                </tr>
+                <tr class= "tab2">
+                    <td> </td>
+                    <td class= "r"> </td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        {{/if}}
+      {{/each}}
+    </script>
+  
+   <script src="lib/jquery/jquery.js"></script>
+   <script src="lib/bootstrap/js/bootstrap.js"></script>
+   <script src="js/template.js"></script>
+   <script src="js/categorypagelist.js"></script>
+    </body>
+</html>

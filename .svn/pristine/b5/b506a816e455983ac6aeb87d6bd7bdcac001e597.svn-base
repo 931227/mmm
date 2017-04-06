@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <!-- 先引入第三方再引入自己 -->
+        <link rel="stylesheet" href='lib/bootstrap/css/bootstrap.css'>
+        <link rel="stylesheet/less" href="css/base.less">
+        <link rel="stylesheet/less" href="css/index.less">
+        <!-- 引入less编辑 -->
+        <script src="lib/less/less.min.js"></script>
+    </head>
+    <body>
+    <!-- 头部区域 -->
+    <header id='header'>
+        <a href="#" class="logo"><img src="images/header_logo.png" ></a>
+        <a href="#" class="app"><img src="images/header_app.png" ></a>
+    </header>
+    <!-- 搜索区域 -->
+    <section id='search'>
+        <form action="">
+            <input type="search" placeholder='请输入你想比价的商品'>
+            <input type="button" value="搜索">
+        </form>
+    </section>
+    <!-- 菜单区域 -->
+    <section id='menu'>
+        <div class="row">
+          <div class="col-xs-3 ">
+              <a href="#">
+                  <img src="images/ic_search.png" alt="">
+                  <p>比价搜索</p>
+              </a>
+          </div>
+          <div class="col-xs-3 ">
+              <a href="#">
+                  <img src="images/ic_search.png" alt="">
+                  <p>比价搜索</p>
+              </a>
+          </div>
+          <div class="col-xs-3 ">
+              <a href="#">
+                  <img src="images/ic_search.png" alt="">
+                  <p>比价搜索</p>
+              </a>
+          </div>
+          <div class="col-xs-3 ">
+              <a href="#">
+                  <img src="images/ic_search.png" alt="">
+                  <p>比价搜索</p>
+              </a>
+          </div>
+          <div class="col-xs-3 ">
+              <a href="#">
+                  <img src="images/ic_search.png" alt="">
+                  <p>比价搜索</p>
+              </a>
+          </div>
+          <div class="col-xs-3 ">
+              <a href="#">
+                  <img src="images/ic_search.png" alt="">
+                  <p>比价搜索</p>
+              </a>
+          </div>
+          <div class="col-xs-3 ">
+              <a href="#">
+                  <img src="images/ic_search.png" alt="">
+                  <p>比价搜索</p>
+              </a>
+          </div>
+          <div class="col-xs-3 ">
+              <a href="#">
+                  <img src="images/ic_search.png" alt="">
+                  <p>比价搜索</p>
+              </a>
+          </div>
+          <div class="col-xs-3 ">
+              <a href="#">
+                  <img src="images/ic_search.png" alt="">
+                  <p>比价搜索</p>
+              </a>
+          </div>
+          <div class="col-xs-3 ">
+              <a href="#">
+                  <img src="images/ic_search.png" alt="">
+                  <p>比价搜索</p>
+              </a>
+          </div>
+          <div class="col-xs-3 ">
+              <a href="#">
+                  <img src="images/ic_search.png" alt="">
+                  <p>比价搜索</p>
+              </a>
+          </div>
+          <div class="col-xs-3 ">
+              <a href="#">
+                  <img src="images/ic_search.png" alt="">
+                  <p>比价搜索</p>
+              </a>
+          </div>
+        </div>
+
+    </section>
+    <!-- 商品推荐 -->
+    <main id='recommend'>
+        
+    </main>    
+    <!-- 品牌排行 -->
+    <section id='brand'></section>
+    <!-- 底部区域 -->
+    <footer id='footer'>
+        <ul class="clearfix">
+            <li class="login"><a href="#">登录</a></li>
+            <li class="register"><a href="#">注册</a></li>
+            <li class="top"><a href="#">返回顶部</a></li>
+        </ul>
+        <div class="info">
+            <p><a href="#"><span>手机APP下载</a></span> 慢慢买手机版--掌上比价平台</a></p>
+            <p><a href="#">m.manmanbuy.com</a></p>
+        </div>
+    </footer>
+
+   <script src="lib/jquery/jquery.js"></script>
+   <script src="lib/bootstrap/js/bootstrap.js"></script>
+   <script src="js/template.js"></script>
+   <script src="js/index.js"></script>
+    </body>
+</html>

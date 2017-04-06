@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>最新优惠--省钱控--慢慢买</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="fav icon" href="images/favicon.ico">
+    <!-- 先引入第三方再引入自己 -->
+    <link rel="stylesheet" href='lib/bootstrap/css/bootstrap.css'>
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+    <link rel="stylesheet/less" href="css/base.less">
+    <link rel="stylesheet/less" href="css/baicaijia.less">
+    <!-- 引入less编辑 -->
+    <script src="lib/less/less.min.js"></script>
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id='header'>
+        <a href="index.html"><i class="iconfont icon-zuo"></i></a>
+        <h1 class="tittle">白菜价--淘宝内部优惠券</h1>
+        <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia&ckey=CK1360146084813"><i class="iconfont icon-appxiazai"></i></a>
+    </header>
+    <!-- 导航区域 -->
+    <section id='baicainav'>
+        <div class="nav-right">
+            <i class='iconfont icon-icon2'></i>
+        </div>
+        <div class="nav-left">
+            <ul class="clearfix">
+                <!-- <li><a href="#" >全部</a></li>
+          <li><a href="#">热销</a></li>
+          <li><a href="#">9块包邮</a></li>
+          <li><a href="#">数码家电</a></li>
+          <li><a href="#">居家</a></li>
+          <li><a href="#">美食</a></li>
+          <li><a href="#">男装</a></li>
+          <li><a href="#">女装</a></li>
+          <li><a href="#">鞋包配饰</a></li>
+          <li><a href="#">文体</a></li>
+          <li><a href="#">母婴</a></li>
+          <li><a href="#">美妆</a></li> -->
+            </ul>
+        </div>
+        <div class='search'>
+            <form action="">
+                <input type="search" placeholder='搜索商品即可查内部券'>
+                <input type="button" value="搜索">
+            </form>
+        </div>
+    </section>
+
+    <!-- 白菜价分类列表 -->
+    <section id="baicaicategory">
+        <!-- <div class="baicai-item clearfix">
+            <div class="item-left">
+                <img src="images/tianmao.jpg">
+            </div>
+            <div class="item-right">
+                <h2><span class="b">[包邮]</span>双十一红包 今日开启</h2>
+                <p class="price"><em>¥</em>0.0
+                    <del>¥0</del>
+                </p>
+                <div class="bar clearfix">
+                    <a href="http://shop.m.taobao.com/shop/coupon.htm?activityId=27a14c9fc6bb4a48b917d567fcf8f664&amp;sellerId=2246833798" class="goquan" target="_blank"></a>
+                    <i><em style="width:1%;"></em><span>1%</span></i>
+                    <b>已领82张</b>
+                </div>
+                <p class="coupon clearfix">
+                  <a href="http://shop.m.taobao.com/shop/coupon.htm?activityId=27a14c9fc6bb4a48b917d567fcf8f664&amp;sellerId=2246833798" target="_blank">点此领15元优惠券
+                  </a>
+                 <a biz-itemid="56297410_8818824_54778388" isconvert="1" href="http://s.click.taobao.com/3HlIdQx" target="_blank">下单链接</a>
+                </p>
+            </div>
+        </div> -->
+    </section>
+    <!-- 底部区域 -->
+    <footer id='footer'>
+        <ul class="clearfix">
+            <li class="login"><a href="login.html">登录</a></li>
+            <li class="register"><a href="register.html">注册</a></li>
+            <li class="top"><a href="#"><i class="iconfont icon-xiangshang"></i>返回顶部</a></li>
+        </ul>
+        <div class="info">
+            <p><a href="#"><span>手机APP下载</span> 慢慢买手机版--掌上比价平台</a></p>
+            <p><a href="#">m.manmanbuy.com</a></p>
+        </div>
+    </footer>
+    <!-- app下载 -->
+    <div id="download">
+        <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia&ckey=CK1360146084813"><img src="images/download.png"></a>
+    </div>
+    <!-- 优惠商品模板 -->
+    <script type="text/html" id='baicainavTmp'>
+        {{each result as value i}} {{if i == 0}}
+        <li><a href="#" data-id={{value.titleId}} class='current'>{{value.title}}</a></li>
+        {{/if}} {{ if i != 0 }}
+        <li><a href="#" data-id={{value.titleId}}>{{value.title}}</a></li>
+        {{/if}} {{/each}}
+    </script>
+    <!-- 优惠商品列表模板 -->
+    <script type="text/html" id='categoryTmp'>
+      {{each result as value i}}
+          <div class="baicai-item clearfix">
+              <div class="item-left">
+                  {{#value.productImg}}
+              </div>
+              <div class="item-right">
+                  <h2>{{#value.productName}}</h2>
+                  <p class="price">
+                  {{#value.productPrice}}
+                  </p>
+                  {{#value.productCouponRemain}}
+                  <p class="coupon clearfix">
+                    {{#value.productCoupon}}
+                    {{#value.productHref}}
+                  </p>
+              </div>
+          </div>
+      {{/each}}
+    </script>
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <script src="js/template.js"></script>
+    <script src="js/swipe.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/baicaijia.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>慢慢买比价网--手机版</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="fav icon" href="images/favicon.ico">
+        <!-- 先引入第三方再引入自己 -->
+        <link rel="stylesheet" href='lib/bootstrap/css/bootstrap.css'>
+        <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+        <link rel="stylesheet/less" href="css/base.less">
+        <link rel="stylesheet/less" href="css/brands.less">
+        <!-- 引入less编辑 -->
+        <script src="lib/less/less.min.js"></script>
+    </head>
+    <body>
+    <!-- 头部区域 -->
+    <header id='header'>
+        <a href="#" class="logo"><img src="images/header_logo.png" ></a>
+        <a href="#" class="app"><img src="images/header_app.png" ></a>
+    </header>
+    <!-- 搜索区域 -->
+    <section id='search'>
+        <form action="">
+            <input type="search" placeholder='请输入你想比价的商品'>
+            <input type="button" value="搜索">
+        </form>
+    </section>
+    <!-- 导航 -->
+    <section id='nav'>
+      <ol class="breadcrumb">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="brands.html">全部分类</a></li>
+      </ol>
+    </section>
+    <!-- 热门品牌排行 -->
+    <section id='rank'>
+        <!-- <div class="one">
+          <h3>平板电视哪个牌子好</h3>
+          <ul>
+            <li><a href="#">
+              <span>1</span>
+              <h2>海信平板电视</h2>
+              <p>30天全网销售：242408件</p>
+              <i class="iconfont icon-xiangyou"></i>
+            </a></li>
+            <li><a href="#">
+              <span>2</span>
+              <h2>海信平板电视</h2>
+              <p>30天全网销售：242408件</p>
+              <i class="iconfont icon-xiangyou"></i>
+            </a></li>
+            <li><a href="#">
+              <span>3</span>
+              <h2>海信平板电视</h2>
+              <p>30天全网销售：242408件</p>
+              <i class="iconfont icon-xiangyou"></i>
+            </a></li>
+          </ul>
+        </div> -->
+        <!-- <div class="two">
+          <h3>平板电视产品销量排行</h3>
+          <div class="media">
+            <a class="pull-left" href="#">
+              <img class="media-object" src="images/two.jpg"  alt="...">
+            </a>
+            <div class="media-body">
+              <h4 class="media-heading">酷开(coocaa) K32 32英寸 高清720P智能网络LED液晶电视</h4>
+              <p class="price">￥1098.00</p>
+              <p class="info">报价(9)  全网评论(69015)</p>
+            </div>
+          </div>
+          <div class="media">
+            <a class="pull-left" href="#">
+              <img class="media-object" src="images/two.jpg"  alt="...">
+            </a>
+            <div class="media-body">
+              <h4 class="media-heading">酷开(coocaa) K32 32英寸 高清720P智能网络LED液晶电视</h4>
+              <p class="price">￥1098.00</p>
+              <p class="info">报价(9)  全网评论(69015)</p>
+            </div>
+          </div>
+          <div class="media">
+            <a class="pull-left" href="#">
+              <img class="media-object" src="images/two.jpg"  alt="...">
+            </a>
+            <div class="media-body">
+              <h4 class="media-heading">酷开(coocaa) K32 32英寸 高清720P智能网络LED液晶电视</h4>
+              <p class="price">￥1098.00</p>
+              <p class="info">报价(9)  全网评论(69015)</p>
+            </div>
+          </div>
+        </div> -->
+       <!--  <div class="three">
+          <h3>平板电视最新评论</h3>
+          <div class="tr-commend">
+            <div class="media">
+              <a class="pull-left" href="#">
+                <img class="media-object" src="images/two.jpg"  alt="...">
+              </a>
+              <div class="media-body">
+                <h4 class="media-heading">创维(Skyworth) 42E5ERS 42英寸 全高清 智能网络LED液晶电视</h4>
+              </div>
+            </div>
+            <div class="popover bottom">
+              <div class="arrow"></div>
+              <h3 class="popover-title">姚**姗<span>2017/3/28</span></h3>
+              <div class="popover-content">
+                <p>送货挺快的，头天晚上下单，第二天上午送到，送货的小伙子非常好，帮着验机，检查，非常感谢，上午送到就打电话联系安装，下午天还下着雨负责安装的小伙子就来了，安装调试完了，人都走了，换台发现定格了，就又给安装的小伙子打电话又拐回来，专门教我怎么调试，总之这次购物非常满意。</p>
+              </div>
+            </div>
+          </div>
+          <div class="tr-commend">
+            <div class="media">
+              <a class="pull-left" href="#">
+                <img class="media-object" src="images/two.jpg"  alt="...">
+              </a>
+              <div class="media-body">
+                <h4 class="media-heading">创维(Skyworth) 42E5ERS 42英寸 全高清 智能网络LED液晶电视</h4>
+              </div>
+            </div>
+            <div class="popover bottom">
+              <div class="arrow"></div>
+              <h3 class="popover-title">姚**姗</h3>
+              <div class="popover-content">
+                <p>送货挺快的，头天晚上下单，第二天上午送到，送货的小伙子非常好，帮着验机，检查，非常感谢，上午送到就打电话联系安装，下午天还下着雨负责安装的小伙子就来了，安装调试完了，人都走了，换台发现定格了，就又给安装的小伙子打电话又拐回来，专门教我怎么调试，总之这次购物非常满意。</p>
+              </div>
+            </div>
+          </div>
+        </div> -->
+    </section>
+    <!-- 底部区域 -->
+    <footer id='footer'>
+        <ul class="clearfix">
+            <li class="login"><a href="#">登录</a></li>
+            <li class="register"><a href="#">注册</a></li>
+            <li class="top"><a href="#"><i class="iconfont icon-xiangshang"></i>返回顶部</a></li>
+        </ul>
+        <div class="info">
+            <p><a href="#"><span>手机APP下载</span> 慢慢买手机版--掌上比价平台</a></p>
+            <p><a href="#">m.manmanbuy.com</a></p>
+        </div>
+    </footer>
+    <!-- app下载 -->
+    <div id="download">
+      <a href="#"><img src="images/download.png"></a>
+    </div>
+  <!-- 品牌排行模板 -->
+  <script type="text/html" id='rankTmp'>
+    <div class="caption"><p>热门品牌排行</p></div>
+    <ul class="list-group">
+    {{each result as value}}
+    <li class="list-group-item"><a href="#" data-id={{value.brandTitleId}}>{{value.brandTitle}}<i class="iconfont icon-weibiaoti35"></i></a></li>
+    {{/each}}
+    </ul>
+  </script>
+    <!-- 二级页面第一部分模板 -->
+    <script type="text/html" id='oneTmp'> 
+      <div class="one">
+        <h3>平板电视哪个牌子好</h3>
+        <ul>
+        {{each result as value i}}
+          <li><a href="#">
+            <span>{{i+1}}</span>
+            <h2>{{value.brandName}}</h2>
+            <p>{{value.brandInfo}}</p>
+            <i class="iconfont icon-xiangyou"></i>
+          </a></li>
+          {{/each}}
+        </ul>
+      </div>
+    </script>
+     <!-- 二级页面第二部分模板 -->
+    <script type="text/html" id='twoTmp'>
+      <div class="two">
+        <h3>平板电视产品销量排行</h3>
+        {{each result as value i}}
+        <div class="media">
+          <a class="pull-left" href="#">
+            {{#value.productImg}}
+          </a>
+          <div class="media-body">
+            <h4 class="media-heading">{{value.productName}}</h4>
+            <p class="price">{{value.productPrice}}</p>
+            <p class="info">{{value.productQuote}}  {{value.productCom}}</p>
+          </div>
+        </div>
+        {{/each}}  
+      </div>
+    </script>
+    <!-- 二级页面第三部分模板 -->
+    <script type="text/html" id='threeTmp'>
+      <div class="three">
+        <h3>平板电视最新评论</h3>
+        {{each result as value i}}
+        <div class="tr-commend">
+          <div class="media">
+            <a class="pull-left" href="#">
+              <img class="media-object" src="images/two.jpg"  alt="...">
+            </a>
+            <div class="media-body">
+              <h4 class="media-heading">创维(Skyworth) 42E5ERS 42英寸 全高清 智能网络LED液晶电视</h4>
+            </div>
+          </div>
+          <div class="popover bottom">
+            <div class="arrow"></div>
+            <h3 class="popover-title">{{value.comName}}<span>{{value.comTime}}</span></h3>
+            <div class="popover-content">
+              <p>{{value.comContent}}</p>
+            </div>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </script>
+   <script src="lib/jquery/jquery.js"></script>
+   <script src="lib/bootstrap/js/bootstrap.js"></script>
+   <script src="js/template.js"></script>
+   <script src="js/brands.js"></script>
+    </body>
+</html>

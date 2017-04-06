@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>凑单品--慢慢买</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="fav icon" href="images/favicon.ico">
+        <!-- 先引入第三方再引入自己 -->
+        <link rel="stylesheet" href='lib/bootstrap/css/bootstrap.css'>
+        <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+        <link rel="stylesheet/less" href="css/base.less">
+        <link rel="stylesheet/less" href="css/gsproduct.less">
+        <!-- 引入less编辑 -->
+        <script src="lib/less/less.min.js"></script>
+    </head>
+    <body>
+    <!-- 头部区域 -->
+    <header id='header'>
+        <a href="index.html"><i class="iconfont icon-zuo"></i></a>
+        <h1 class="tittle">凑单品</h1>
+    </header>
+     <!-- 店铺筛选 -->
+    <section id='filter'>
+      <div class="left clearfix">
+        <div class="shop"><span>京东</span> <i class='iconfont icon-xia'></i></div>
+        <div class="area"><span>华北</span> <i class='iconfont icon-xia'></i></div>
+        <div class="price"><span>一元</span> <i class='iconfont icon-xia'></i></div>
+      </div>
+      <div class="search"><i class='iconfont icon-icon2'></i></div>
+    </section>
+    <!-- 渲染筛选框区域   -->
+    <section id='rend-area'>
+      <ul class="one">
+        
+      </ul>
+      <ul class="two">
+        
+      </ul>
+       <ul class="three">
+        <li><a href="#">全部价格</a><i class='iconfont icon-duihao'></i></li>
+        <li><a href="#">0.5-1元</a><i class='iconfont icon-duihao'></i></li>
+        <li><a href="#">1以上</a><i class='iconfont icon-duihao'></i></li>
+      </ul>
+
+    </section>
+    <!-- 商品内容渲染 -->
+    <section id='showproducts'>
+      <ul class="clearfix">
+        <!-- <li><a href="#">
+          <img src="images/sp.jpg" >
+          <p >【京东超市】廿一客(21cake)专用餐具 1人份(不单独配送)</p>
+          <h2>￥0.50</h2>
+          <input type="button" value="去凑单">
+        </a></li> -->
+        
+      </ul>
+    </section>
+
+    <!-- 凑单筛选区域 -->
+    <section id="search-filter">
+      <form action="">
+          <i class='iconfont icon-sousuo_sousuo'></i>
+          <input type="search" placeholder='请输入你想凑单的商品'>
+          <input type="button" value="搜索">
+      </form>
+      <h2>排序</h2>
+      <div class="sort clearfix">
+          <span class='on'>销量</span>
+          <span>价格 <i class='iconfont icon-arrow-up'></i></span>
+          <span>价格 <i class='iconfont icon-arrow-down'></i></span>
+      </div>
+      <h2>分类</h2>
+      <div class="sort clearfix">
+          <span class='on'>全部</span>
+          <span>家居</span>
+          <span>数码</span>
+          <span>办公</span>
+          <span>个护</span>
+          <span>食品</span>
+          <span>母婴</span>
+          <span>服饰</span>
+      </div>
+
+
+    </section>
+
+     <!-- 渲染模板 -->
+    <script type="text/html" id='rendTmp1'>
+      {{each result as value}}
+        <li><a href="#" data-id={{value.shopId}}>{{value.shopName}}</a><i class="iconfont icon-duihao"></i></li>
+      {{/each}}
+    </script>
+    <script type="text/html" id='rendTmp2'>
+      {{each result as value}}
+        <li><a href="#" data-id={{value.areaId}}>{{value.areaName}}</a><i class="iconfont icon-duihao"></i></li>
+      {{/each}}
+    </script>
+
+    <!-- 商品内容渲染模板 -->
+    <script type="text/html" id='productTmp'>
+      {{each result as value }}
+        <li><a href="#" data-id={{value.productId}}>
+          <img src={{value.productImg}} >
+          <p >{{value.productName}}</p>
+          <h2>{{value.productPrice}}</h2>
+          <input type="button" value="去凑单">
+        </a></li>
+      {{/each}}
+    </script>
+   <script src="lib/jquery/jquery.js"></script>
+   <script src="lib/bootstrap/js/bootstrap.js"></script>
+   <script src="js/template.js"></script>
+   <script src="js/gsproduct.js"></script>
+    </body>
+</html>

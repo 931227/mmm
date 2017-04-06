@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>慢慢买比价网--手机版</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="fav icon" href="images/favicon.ico">
+        <!-- 先引入第三方再引入自己 -->
+        <link rel="stylesheet" href='lib/bootstrap/css/bootstrap.css'>
+        <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+        <link rel="stylesheet/less" href="css/base.less">
+        <link rel="stylesheet/less" href="css/register.less">
+        <!-- 引入less编辑 -->
+        <script src="lib/less/less.min.js"></script>
+    </head>
+    <body>
+    <!-- 头部区域 -->
+    <header id='header'>
+        <a href="index.html" class="logo"><img src="images/header_logo.png" ></a>
+        <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia&ckey=CK1360146084813" class="app"><img src="images/header_app.png" ></a>
+    </header>
+    <!-- 搜索区域 -->
+    <section id='search'>
+        <form action="">
+            <input type="search" placeholder='请输入你想比价的商品'>
+            <input type="button" value="搜索">
+        </form>
+    </section>
+    <!-- 登陆界面 -->
+    <section id='register'>
+      <form >
+        <input type="text" class="username" placeholder='请输入用户名'>
+        <p class="user-tips"></p>
+        <input type="password" class="password" placeholder='密码(6-20个字符)且必须包含字母、数字、标点符号'>
+        <p class="pw1-tips"></p>
+        <input type="password" class="comfirm" placeholder='确认密码'>
+        <p class="pw2-tips"></p>
+        <input type="number" class="phone" placeholder='请输入手机号'>
+        <p class="ph-tips"></p>
+        <div class="security-code">
+          <img style="vertical-align: middle;" alt="验证码" id="ImageButton3" title="点击更换验证码！"  src="http://m.manmanbuy.com/CheckCode.aspx">
+          <input type="text" class="text" >
+          <input type="button" value="获取手机验证码" class="sms">
+          <input type="number" class="phone" placeholder='请输入手机验证码'>
+          <input type="number" class="phone" placeholder='请输入邮箱'>
+        </div>
+        <input type="button" value="注册">
+        
+      </form>
+    </section>
+    <!-- 底部区域 -->
+    <footer id='footer'>
+        <ul class="clearfix">
+            <li class="login"><a href="login.html">登录</a></li>
+            <li class="register"><a href="login.html">注册</a></li>
+            <li class="top"><a href="#"><i class="iconfont icon-xiangshang"></i>返回顶部</a></li>
+        </ul>
+        <div class="info">
+            <p><a href="#"><span>手机APP下载</span> 慢慢买手机版--掌上比价平台</a></p>
+            <p><a href="#">m.manmanbuy.com</a></p>
+        </div>
+    </footer>
+
+   <script src="lib/jquery/jquery.js"></script>
+   <script src="lib/bootstrap/js/bootstrap.js"></script>
+   <script src="js/template.js"></script>
+   <script src="js/register.js"></script>
+    </body>
+</html>

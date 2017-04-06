@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>慢慢买比价网--手机版</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="fav icon" href="images/favicon.ico">
+        <!-- 先引入第三方再引入自己 -->
+        <link rel="stylesheet" href='lib/bootstrap/css/bootstrap.css'>
+        <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+        <link rel="stylesheet/less" href="css/base.less">
+        <link rel="stylesheet/less" href="css/login.less">
+        <!-- 引入less编辑 -->
+        <script src="lib/less/less.min.js"></script>
+    </head>
+    <body>
+    <!-- 头部区域 -->
+    <header id='header'>
+        <a href="index.html" class="logo"><img src="images/header_logo.png" ></a>
+        <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia&ckey=CK1360146084813" class="app"><img src="images/header_app.png" ></a>
+    </header>
+    <!-- 搜索区域 -->
+    <section id='search'>
+        <form action="">
+            <input type="search" placeholder='请输入你想比价的商品'>
+            <input type="button" value="搜索">
+        </form>
+    </section>
+    <!-- 登陆界面 -->
+    <section id='login'>
+      <form >
+        <input type="text" class="username" placeholder='用户名'>
+        <input type="password" class="password" placeholder='密码'>
+        <input type="button" value="登录">
+        <input type="checkbox"  checked="checked"><span>一个月内自动登录</span>
+        <p>忘记密码：请电脑登录www.manmanbuy.com找回</p>
+      </form>
+    </section>
+    <!-- 底部区域 -->
+    <footer id='footer'>
+        <ul class="clearfix">
+            <li class="login"><a href="login.html">登录</a></li>
+            <li class="register"><a href="register.html">注册</a></li>
+            <li class="top"><a href="#"><i class="iconfont icon-xiangshang"></i>返回顶部</a></li>
+        </ul>
+        <div class="info">
+            <p><a href="#"><span>手机APP下载</span> 慢慢买手机版--掌上比价平台</a></p>
+            <p><a href="#">m.manmanbuy.com</a></p>
+        </div>
+    </footer>
+
+   <script src="lib/jquery/jquery.js"></script>
+   <script src="lib/bootstrap/js/bootstrap.js"></script>
+   <script src="js/template.js"></script>
+  <!--  <script src="js/index.js"></script> -->
+    </body>
+</html>

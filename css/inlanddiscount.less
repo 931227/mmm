@@ -1,0 +1,73 @@
+/*头部区域*/
+#header{
+  height:44px;
+  position: relative;
+  .icon-zuo{
+    position: absolute;
+    left:10px;
+    top:8px;
+    &:before{
+      color:#fff;
+      font-size: 20px;
+      font-weight: 900;
+    } 
+  }
+  .tittle{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 44px;
+    color: #fff;
+  }
+  .icon-appxiazai{
+       position: absolute;
+       right:15px;
+       top:0px;
+       &:before{
+          color:#fff;
+          font-size: 30px;
+          // font-weight: 900;
+       } 
+    }
+}
+
+
+/*商品展示*/
+#showprou{
+  padding:10px 20px;
+  > ul {
+    > li {
+      float: left;
+      width: 50%;
+      padding:10px;
+      > a {
+            display: block;
+            width: 100%;
+            height: 100%;
+          > img {
+            width: 140px;
+            height: 140px;
+            display: block;
+            margin: 0 auto;
+          }
+          > .productname {
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              font-size: 14px;
+              font-weight: 900;
+              color:#000;
+              height:25px;
+          }
+          > .productprice {
+              color:#ff6c00;
+              font-size: 16px;
+              margin-bottom: 10px;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+          }
+      }
+    }
+  }
+}

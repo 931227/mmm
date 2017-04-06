@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>最新优惠--省钱控--慢慢买</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="fav icon" href="images/favicon.ico">
+        <!-- 先引入第三方再引入自己 -->
+        <link rel="stylesheet" href='lib/bootstrap/css/bootstrap.css'>
+        <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+        <link rel="stylesheet/less" href="css/base.less">
+        <link rel="stylesheet/less" href="css/moneyctrl.less">
+        <!-- 引入less编辑 -->
+        <script src="lib/less/less.min.js"></script>
+    </head>
+    <body>
+
+    <!-- 头部区域 -->
+    <header id='header'>
+        <a href="index.html"><i class="iconfont icon-zuo"></i></a>
+        <h1 class="tittle">省钱控--最新优惠</h1>
+        <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia&ckey=CK1360146084813"><i class="iconfont icon-appxiazai"></i></a>
+    </header>
+
+    <!-- 优惠商品 -->
+    <section id="privilege">
+      
+    </section>
+    <!-- 底部翻页导航 -->
+    <section id="paging">
+      <input type="button" value="上一页" class="up forbit">
+      <input type="button" value="下一页" class="down">
+      <div class="page iconfont icon-xia">
+          1/15
+      </div>
+      <ul class="selector">
+
+      </ul>
+    </section>
+    <!-- 面包屑导航 -->
+    <section id='nav'>
+      <ol class="breadcrumb">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="moneyctrl.html">省钱控</a></li>
+      </ol>
+    </section>
+
+    <!-- 底部区域 -->
+    <footer id='footer'>
+        <ul class="clearfix">
+            <li class="login"><a href="login.html">登录</a></li>
+            <li class="register"><a href="register.html">注册</a></li>
+            <li class="top"><a href="#"><i class="iconfont icon-xiangshang"></i>返回顶部</a></li>
+        </ul>
+        <div class="info">
+            <p><a href="#"><span>手机APP下载</span> 慢慢买手机版--掌上比价平台</a></p>
+            <p><a href="#">m.manmanbuy.com</a></p>
+        </div>
+    </footer>
+    <!-- app下载 -->
+    <div id="download">
+      <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia&ckey=CK1360146084813"><img src="images/download.png"></a>
+    </div>
+  
+    <!-- 优惠商品模板 -->
+    <script type="text/html" id='privilegeTmp'>
+      {{each result as value}}
+      <div class="media" data-id={{value.productId}}>
+        <a class="pull-left" href="#" >
+          {{#value.productImgSm}}
+        </a>
+        <div class="media-body">
+          <h4 class="media-heading">{{value.productName}} <span>{{value.productPinkage}}</span></h4>
+          <p class="other">
+            <span>{{value.productFrom}} | {{value.productTime}}</span>
+            <span class='commend'><i class="iconfont icon-pinglun"></i>   {{getNum1(value.productComCount)}}</span>
+          </p>
+        </div>
+      </div> 
+      {{/each}} 
+    </script>
+  
+
+   <script src="lib/jquery/jquery.js"></script>
+   <script src="lib/bootstrap/js/bootstrap.js"></script>
+   <script src="js/template.js"></script>
+   <script src="js/base.js"></script>
+   <script src="js/moneyctrl.js"></script>
+    </body>
+</html>

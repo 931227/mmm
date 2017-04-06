@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>慢慢买比价网--手机版</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="fav icon" href="images/favicon.ico">
+        <!-- 先引入第三方再引入自己 -->
+        <link rel="stylesheet" href='lib/bootstrap/css/bootstrap.css'>
+        <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+        <link rel="stylesheet/less" href="css/base.less">
+        <link rel="stylesheet/less" href="css/index.less">
+        <!-- 引入less编辑 -->
+        <script src="lib/less/less.min.js"></script>
+    </head>
+    <body>
+    <!-- 头部区域 -->
+    <header id='header'>
+        <a href="#" class="logo"><img src="images/header_logo.png" ></a>
+        <a href="#" class="app"><img src="images/header_app.png" ></a>
+    </header>
+    <!-- 搜索区域 -->
+    <section id='search'>
+        <form action="">
+            <input type="search" placeholder='请输入你想比价的商品'>
+            <input type="button" value="搜索">
+        </form>
+    </section>
+    <!-- 菜单区域 -->
+    <section id='menu'>
+        <div class="row">
+
+
+        </div>
+    </section>
+    <!-- 商品推荐 -->
+    <main id='recommend'>
+        <div class="recom-top">
+          <span>超值折扣推荐</span>
+          <a href="#"><img src="images/more.png"  alt=""></a>
+        </div>
+        <div class="main">
+   
+        </div>
+        <div class="more">
+          <a href="#">更多优惠信息 >> </a>
+        </div>
+    </main>    
+    <!-- 品牌排行 -->
+    <section id='brand'>
+      <span>品牌排行</span>
+      <a href="#"><img src="images/more.png"  alt=""></a>
+    </section>
+    <!-- 底部区域 -->
+    <footer id='footer'>
+        <ul class="clearfix">
+            <li class="login"><a href="#">登录</a></li>
+            <li class="register"><a href="#">注册</a></li>
+            <li class="top"><a href="#"><i class="iconfont icon-xiangshang"></i>返回顶部</a></li>
+        </ul>
+        <div class="info">
+            <p><a href="#"><span>手机APP下载</span> 慢慢买手机版--掌上比价平台</a></p>
+            <p><a href="#">m.manmanbuy.com</a></p>
+        </div>
+    </footer>
+    <!-- app下载 -->
+    <div id="download">
+      <a href="#"><img src="images/download.png"></a>
+    </div>
+     <!-- 菜单区域模板 -->
+    <script type="text/html" id='menuTmp'>
+    {{each result as value}}
+      <div class="col-xs-3" >
+          <a href={{value.titlehref}}>
+              {{#value.img}}
+              <p>{{value.name}}</p>
+          </a>
+      </div>
+      {{/each}}
+    </script>
+    <!-- 商品推荐模板 -->
+    <script type="text/html" id='mainTmp'>
+      {{each result as value}}
+      <div class="media">
+        <a class="pull-left" href="#">
+          {{#value.productImgSm}}
+        </a>
+        <div class="media-body">
+          <h4 class="media-heading">{{value.productName}} <span>{{value.productPinkage}}</span></h4>
+          <p class="other">
+            <span>{{value.productFrom}} | {{value.productTime}}</span>
+            <span class='commend'><i class="iconfont icon-pinglun"></i>{{value.productComCount}}</span>
+          </p>
+        </div>
+      </div> 
+      {{/each}} 
+    </script>
+   <script src="lib/jquery/jquery.js"></script>
+   <script src="lib/bootstrap/js/bootstrap.js"></script>
+   <script src="js/template.js"></script>
+   <script src="js/index.js"></script>
+    </body>
+</html>

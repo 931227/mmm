@@ -1,0 +1,32 @@
+
+  // 菜单栏动态渲染
+
+  $.ajax({  
+    url: 'http://139.199.157.195:9090/api/getindexmenu',
+    type: 'GET',
+    dataType: 'json',
+    success : function( data ){
+        var html = template('menuTmp',data);
+        $('#menu .row').html( html );
+        // 点击更多加载剩余菜单
+        $('#menu .row .col-xs-3:nth-child(8)').on('click',function(){
+          $('#menu .row .col-xs-3:nth-last-child(-n+4)').show();
+        })
+    }
+  })
+
+// 商品推荐动态渲染
+
+   $.ajax({  
+    url: 'http://139.199.157.195:9090/api/getmoneyctrl',
+    type: 'GET',
+    dataType: 'json',
+    success : function( data ){
+        var html = template('mainTmp',data);
+        $('#recommend .main').html( html ); 
+    }
+  })
+
+
+
+

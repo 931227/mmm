@@ -1,0 +1,306 @@
+@charset "utf-8";
+/* 禁用iPhone中Safari的字号自动调整 */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  /* 解决IOS默认滑动很卡的情况 */
+  -webkit-overflow-scrolling: touch;
+}
+/* 禁止缩放表单 */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input {
+  resize: none;
+  border: none;
+}
+/* 取消链接高亮  */
+body,
+div,
+ul,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+select,
+p,
+dl,
+dt,
+dd,
+a,
+img,
+button,
+form,
+table,
+th,
+tr,
+td,
+tbody,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/* 设置HTML5元素为块 */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+/* 图片自适应 */
+img {
+  width: 100%;
+  height: auto;
+  width: auto\9;
+  /* ie8 */
+  -ms-interpolation-mode: bicubic;
+  /*为了照顾ie图片缩放失真*/
+}
+/* 初始化 */
+body,
+div,
+ul,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+select,
+p,
+dl,
+dt,
+dd,
+a,
+img,
+button,
+form,
+table,
+th,
+tr,
+td,
+tbody,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font: 12px/1.5 'Microsoft YaHei', '宋体', Tahoma, Arial, sans-serif;
+  color: #555;
+  background-color: #F7F7F7;
+}
+em,
+i {
+  font-style: normal;
+}
+ul,
+li {
+  list-style-type: none;
+}
+strong {
+  font-weight: normal;
+}
+.clearfix() {
+  zoom: 1;
+  &:after {
+    content: "";
+    display: block;
+    visibility: hidden;
+    height: 0;
+    clear: both;
+  }
+}
+a {
+  text-decoration: none;
+  color: #969696;
+  font-family: 'Microsoft YaHei', Tahoma, Arial, sans-serif;
+  &:hover{
+    text-decoration: none;
+  }
+}
+ul,
+ol {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-family: 'Microsoft YaHei';
+}
+img {
+  border: none;
+}
+input {
+  font-family: 'Microsoft YaHei';
+}
+.w50() {
+  width: 50%;
+}
+.w25() {
+  width: 25%;
+}
+.w20() {
+  width: 20%;
+}
+.w33() {
+  width: 33.333333%;
+}
+.fl() {
+  float: left;
+}
+.fr() {
+  float: right;
+}
+.db() {
+  display: block !important;
+}
+.dn() {
+  display: none;
+}
+/*单行溢出*/
+.one_txt_cut() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+}
+/*多行溢出 手机端使用*/
+.txt_cut(@num:2) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: @num;
+  -webkit-box-orient: vertical;
+}
+/* 水平垂直居中的公共类 */
+.center(){
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform:translate(-50%,-50%);
+}
+/* 水平居中公共类 */
+.center-x(){
+  position: absolute;
+  left: 50%;
+  transform:translateX(-50%);
+}
+/* 垂直居中公共类 */
+.center-y(){
+  position: absolute;
+  top: 50%;
+  transform:translateY(-50%);
+}
+.bz(){
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.bgz(){
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+/*头部导航*/
+#header{
+    background-color: #ff841d;
+    height:50px;
+    >.logo{
+      width: 75%;
+      float: left;
+      padding: 12px;
+      margin-left: 5px;
+      img{
+       overflow: hidden;
+        max-height: 25px;
+        width: 186px;
+      }
+    }
+    >.app{
+     position: absolute;
+     right: 0;
+     top: 0;
+     padding: 7px;
+      img{
+       max-width: 34px;
+       overflow: hidden;
+      }
+    }
+}
+/*底部区域*/
+#footer{
+    ul{
+      border-top:  1px solid #c4c4c4;
+      border-bottom:  1px solid #c4c4c4;
+      li{
+        float: left;
+        text-align: center;
+        font-size: 14px;
+        line-height: 35px;
+        a{
+          display: block;
+          width: 100%;
+          color:#000;
+        }
+      }
+      .login{
+        width: 30%;
+        border-right: 1px solid #c4c4c4;
+      }
+      .register{
+        width: 30%;
+        border-right: 1px solid #c4c4c4;
+        
+      }
+      .top{
+        width: 40%;
+      }
+    }
+    .info{
+      padding:15px 0  20px 0;
+      p{
+        text-align: center;
+        span{
+            color:red;
+        }
+      }
+    }
+}

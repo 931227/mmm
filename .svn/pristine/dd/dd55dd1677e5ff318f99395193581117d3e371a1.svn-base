@@ -1,0 +1,169 @@
+/*导航*/
+#nav{
+      height:36px;
+      border-top: solid 1px #ebebeb;
+      border-bottom: 1px solid #ccc;
+      line-height: 36px;
+      padding-left: 8px;
+      font-size: 14px;
+      background-color: #ebebeb;
+      background: -webkit-gradient(linear,0 0,0 100%,from(#ffffff),to(#ebebeb));
+      .breadcrumb{
+        padding:0;
+        margin-bottom: 10px;
+        background-color: rgba(0,0,0,0);
+      }
+}
+/*热门品牌排行*/
+#rank{
+  .caption{
+    padding: 10px 5px;
+    p{
+      height: 100%;
+      border: 1px solid #ccc;
+      color:#874604;
+      font-size: 16px;
+      padding:10px;
+      background-color: #eee;
+    }
+  }
+  .list-group{
+    position: relative;
+    .list-group-item{
+      font-size: 14px;
+      font-weight: 900;
+      padding:0;
+      a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        color:#000;
+        padding:10px 15px;
+        i{
+          position: absolute;
+          right:10px;
+          top:10px;
+        }
+      }
+    }
+  }
+    h3{
+      line-height: 36px;
+      font-size: 14px;
+      padding-left: 10px;
+      border-bottom: 1px solid #ccc;
+      color: #874604;
+      font-weight: 900;
+    }
+      .one{
+        ul{
+          li:nth-child(1) span{
+            background-color: #ff9314;
+          }
+          li:nth-child(2) span{
+            background-color: #ff9314;
+          }
+          li:nth-child(3) span{
+            background-color: #8adf5b;
+          }
+          li{
+            padding:10px 40px;
+            position: relative;
+            border-bottom: 1px solid #ccc;
+            a{
+              display: block;
+              height: 100%;
+              span{
+                position: absolute;
+                top:10px;
+                left:10px;
+                width: 20px;
+                height: 20px;
+                background-color: #ccc;
+                text-align: center;
+                line-height: 20px;
+                color: #fff;
+              }
+              h2{
+                font-size: 16px;
+                color: #000;
+              }
+              p{
+                margin-top: 5px;
+              }
+              i{
+                position: absolute;
+                top:15px;
+                right:10px;
+                &:before{
+                  display: block;
+                  width: 20px;
+                  height: 30px;
+                  font-size: 24px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .two{
+          .media{
+            margin-top: 10px;
+            padding:0 15px 10px 15px;
+            border-bottom: 1px solid #ccc;
+            .pull-left{
+                img{
+                  width: 100px;
+                  height: 100px;
+                }
+            }
+            .media-body{
+                .media-heading{
+                  color: #333333;
+                  line-height: 22px;
+                  min-height: 44px;
+                  word-break: break-all;
+                }
+                .price{
+                  font-size: 18px;
+                  color: #ea3900;
+                  vertical-align: middle;
+                }
+            }
+          }  
+      }
+      .three{
+          .tr-commend{
+            .media{
+                margin-top: 10px;
+                padding:0 15px 10px 15px;
+                .pull-left{
+                  img{
+                    width: 80px;
+                    height: 80px;
+                  }
+                }
+                .media-body{
+                  .media-heading{
+                    color:#999;
+                    line-height: 20px;
+                  }
+                }
+            }
+            .popover{
+              display: block;
+              position: relative;
+              margin:10px 10px;
+              max-width: 100%;
+              .arrow{
+                  left:50px;
+              }
+              .popover-title{
+                span{
+                  float: right;
+                }
+              }
+            }
+          }
+      }
+}

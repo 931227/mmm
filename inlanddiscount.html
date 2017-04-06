@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>省钱快爆--慢慢买</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="fav icon" href="images/favicon.ico">
+        <!-- 先引入第三方再引入自己 -->
+        <link rel="stylesheet" href='lib/bootstrap/css/bootstrap.css'>
+        <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+        <link rel="stylesheet/less" href="css/base.less">
+        <link rel="stylesheet/less" href="css/inlanddiscount.less">
+        <!-- 引入less编辑 -->
+        <script src="lib/less/less.min.js"></script>
+    </head>
+    <body>
+
+    <!-- 头部区域 -->
+    <header id='header'>
+        <a href="index.html"><i class="iconfont icon-zuo"></i></a>
+        <h1 class="tittle">国内折扣</h1>
+        <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia&ckey=CK1360146084813"><i class="iconfont icon-appxiazai"></i></a>
+    </header>
+    <!-- 商品展示 -->
+    <section id="showprou">
+      <ul class="clearfix">
+        <!-- <li>
+          <a href="#">
+              <img src="images/fbm.jpg" alt="">
+              <p class="productname ">【京东超市】康师傅 方便面（KSF） 经典系列 红烧牛肉 泡面 五连包 </p>
+              <p class="productprice">10.9元</p>
+              <p class="detail">京东商城 | 2017/4/1 1:23</p>
+          </a>
+        </li> -->
+      </ul>
+    </section>
+   
+    <!-- 面包屑导航 -->
+    <section id='nav'>
+      <ol class="breadcrumb">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="#">国内折扣</a></li>
+      </ol>
+    </section>
+
+    <!-- 底部区域 -->
+    <footer id='footer'>
+        <ul class="clearfix">
+            <li class="login"><a href="login.html">登录</a></li>
+            <li class="register"><a href="register.html">注册</a></li>
+            <li class="top"><a href="#"><i class="iconfont icon-xiangshang"></i>返回顶部</a></li>
+        </ul>
+        <div class="info">
+            <p><a href="#"><span>手机APP下载</span> 慢慢买手机版--掌上比价平台</a></p>
+            <p><a href="#">m.manmanbuy.com</a></p>
+        </div>
+    </footer>
+    <!-- app下载 -->
+    <div id="download">
+      <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia&ckey=CK1360146084813"><img src="images/download.png"></a>
+    </div>
+  
+    <!-- 内容主体模板 -->
+    <script type="text/html" id='showTmp'>
+      {{each result as value i }}
+          {{if i < 16 }}
+          <li>
+            <a href="#" data-id={{value.productId}} >
+                {{#value.productImg}}     
+                <p class="productname ">{{value.productName}}</p>
+                <p class="productprice">{{value.productPrice}}</p>
+                <p class="detail">{{value.productFrom}} | {{value.productTime}}</p>
+            </a>
+          </li>
+          {{/if}}
+      {{/each}} 
+    </script>
+
+   <script src="lib/jquery/jquery.js"></script>
+   <script src="lib/bootstrap/js/bootstrap.js"></script>
+   <script src="js/template.js"></script>
+   <script src="js/base.js"></script>
+   <script src="js/inlanddiscount.js"></script>
+    </body>
+</html>

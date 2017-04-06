@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <!-- 先引入第三方再引入自己 -->
+        <link rel="stylesheet" href='lib/bootstrap/css/bootstrap.css'>
+        <link rel="stylesheet" href="css/base.less">
+        <link rel="stylesheet" href="css/index.less">
+        <!-- 引入less编辑 -->
+        <script src="lib/less/less.min.js"></script>
+    </head>
+    <body>
+    <!-- 头部区域 -->
+    <header id='header'>
+        <a href="#"><img src="images/header_logo.png" ></a>
+    </header>
+    <!-- 搜索区域 -->
+    <section id='search'></section>
+    <!-- 菜单区域 -->
+    <section id='menu'></section>
+    <!-- 商品推荐 -->
+    <section id='recommend'></section>
+    <!-- 底部区域 -->
+    <footer id='footer'></footer>
+   <script src="lib/jquery/jquery.js"></script>
+   <script src="lib/bootstrap/js/bootstrap.js"></script>
+   <script src="js/template.js"></script>
+   <script src="js/index.js"></script>
+    </body>
+</html>
